@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/mtss-analysis/index.html",
+    "href": "posts/mtss-analysis/index.html",
+    "title": "MTSS Delivery Method Analysis",
+    "section": "",
+    "text": "## Initial Project Visualization\n\n#| label: fig-mtss\n#| fig-cap: \"Average Improvement Index by Delivery Method\"\n#| echo: true\n#| warning: false\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n# Ensure your CSV is in the 'data' folder of your project\n\ndf &lt;- read_csv(\"Interventions_Studies_And_Findings_clean.csv\")\n\nRows: 13280 Columns: 285\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr  (28): i_Intervention_Name, i_Protocol, i_Outcome_Domain, i_Intervention...\ndbl (226): ReviewID, i_InterventionID, i_Protocol_Version, i_NumStudiesMeeti...\nlgl  (31): i_Demographics_Sample_International, i_Ethnicity_Not_Hispanic, i_...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n# Calculate means \nmtss_data &lt;- df %&gt;% \n  summarise( \n    `Small-Group (Tiers 2 & 3)` = mean(f_Improvement_Index[s_Delivery_Method_Small_Group %in% 1], na.rm = TRUE), \n    `Whole-Class (Tier 1)` = mean(f_Improvement_Index[s_Delivery_Method_Whole_Class %in% 1], na.rm = TRUE) \n  ) %&gt;% \n  pivot_longer(cols = everything(), names_to = \"Method\", values_to = \"Avg_Improvement\")\n\n# Create the visualization\nggplot(mtss_data, aes(x = reorder(Method, Avg_Improvement), y = Avg_Improvement, fill = Method)) + \n  geom_bar(stat = \"identity\") + \n  geom_text(aes(label = round(Avg_Improvement, 2)), vjust = -0.5) + \n  theme_minimal() + \n  labs( \n    title = \"Average Improvement Index by Delivery Method\", \n    x = \"Delivery Method\", \n    y = \"Average Improvement Index\" \n  ) + \n  scale_fill_manual(values = c(\"#1f77b4\", \"#ff7f0e\")) + \n  theme(legend.position = \"none\")"
+  },
+  {
+    "objectID": "posts/mtss-analysis/index.html#rq1--analysis-and-visualizations.",
+    "href": "posts/mtss-analysis/index.html#rq1--analysis-and-visualizations.",
+    "title": "MTSS Delivery Method Analysis",
+    "section": "",
+    "text": "## Initial Project Visualization\n\n#| label: fig-mtss\n#| fig-cap: \"Average Improvement Index by Delivery Method\"\n#| echo: true\n#| warning: false\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n# Ensure your CSV is in the 'data' folder of your project\n\ndf &lt;- read_csv(\"Interventions_Studies_And_Findings_clean.csv\")\n\nRows: 13280 Columns: 285\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr  (28): i_Intervention_Name, i_Protocol, i_Outcome_Domain, i_Intervention...\ndbl (226): ReviewID, i_InterventionID, i_Protocol_Version, i_NumStudiesMeeti...\nlgl  (31): i_Demographics_Sample_International, i_Ethnicity_Not_Hispanic, i_...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n# Calculate means \nmtss_data &lt;- df %&gt;% \n  summarise( \n    `Small-Group (Tiers 2 & 3)` = mean(f_Improvement_Index[s_Delivery_Method_Small_Group %in% 1], na.rm = TRUE), \n    `Whole-Class (Tier 1)` = mean(f_Improvement_Index[s_Delivery_Method_Whole_Class %in% 1], na.rm = TRUE) \n  ) %&gt;% \n  pivot_longer(cols = everything(), names_to = \"Method\", values_to = \"Avg_Improvement\")\n\n# Create the visualization\nggplot(mtss_data, aes(x = reorder(Method, Avg_Improvement), y = Avg_Improvement, fill = Method)) + \n  geom_bar(stat = \"identity\") + \n  geom_text(aes(label = round(Avg_Improvement, 2)), vjust = -0.5) + \n  theme_minimal() + \n  labs( \n    title = \"Average Improvement Index by Delivery Method\", \n    x = \"Delivery Method\", \n    y = \"Average Improvement Index\" \n  ) + \n  scale_fill_manual(values = c(\"#1f77b4\", \"#ff7f0e\")) + \n  theme(legend.position = \"none\")"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Education Research: MTSS Implementation Outcomes Analysis",
+    "section": "",
+    "text": "Final Project: MTSS Data Analysis Course: EDLD 652 | Data Visualization | Winter 2026\nProject Overview\nThis project investigates how various levels of support within the Multi-Tiered System of Supports (MTSS) framework influence student growth. By analyzing intervention data, I aim to identify which strategies most effectively improve student from culturally outcomes.\nResearch Questions\n1- Do small-group lessons (Tiers 2 & 3) yield higher improvement than whole-class teaching (Tier 1)?\n2- Which Tiers are most effective for minority students compared to non-minority students?\n3- Does student behavior improve more when teachers receive specialized training?\nAnalysis: Research Question 1\nQuestion: Do small-group lessons (Tiers 2 & 3) help more than whole-class teaching (Tier 1)?"
+  },
+  {
+    "objectID": "index.html#welcome-to-my-research-blog",
+    "href": "index.html#welcome-to-my-research-blog",
+    "title": "Education Research: MTSS Implementation Outcomes Analysis",
+    "section": "",
+    "text": "Final Project: MTSS Data Analysis Course: EDLD 652 | Data Visualization | Winter 2026\nProject Overview\nThis project investigates how various levels of support within the Multi-Tiered System of Supports (MTSS) framework influence student growth. By analyzing intervention data, I aim to identify which strategies most effectively improve student from culturally outcomes.\nResearch Questions\n1- Do small-group lessons (Tiers 2 & 3) yield higher improvement than whole-class teaching (Tier 1)?\n2- Which Tiers are most effective for minority students compared to non-minority students?\n3- Does student behavior improve more when teachers receive specialized training?\nAnalysis: Research Question 1\nQuestion: Do small-group lessons (Tiers 2 & 3) help more than whole-class teaching (Tier 1)?"
+  },
+  {
+    "objectID": "index.html#rq1-analysis-and-visualizations",
+    "href": "index.html#rq1-analysis-and-visualizations",
+    "title": "Education Research: MTSS Implementation Outcomes Analysis",
+    "section": "RQ1: Analysis and Visualizations",
+    "text": "RQ1: Analysis and Visualizations"
+  }
+]
