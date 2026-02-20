@@ -19,21 +19,22 @@ Course: EDLD 652 | Data Visualization | Winter 2026
 
 Project Overview
 
-This project investigates how various levels of support within the Multi-Tiered System of Supports (MTSS) framework influence student growth. By analyzing intervention data, I aim to identify which strategies most effectively improve student from outcomes.
+This project investigates how various levels of support within the Multi-Tiered System of Supports (MTSS) framework influence student growth. By analyzing intervention data, I aim to identify which strategies most effectively improve student from culturally outcomes.
 
 Research Questions
 
-Instructional Impact: Do small-group lessons (Tiers 2 & 3) yield higher improvement than whole-class teaching (Tier 1)?
+1- Do small-group lessons (Tiers 2 & 3) yield higher improvement than whole-class teaching (Tier 1)?
 
-Equity in Outcomes: Which Tiers are most effective for minority students compared to non-minority students?
+2-  Which Tiers are most effective for minority students compared to non-minority students?
 
-Professional Development: Does student behavior improve more when teachers receive specialized training?
+3-  Does student behavior improve more when teachers receive specialized training?
 
 Analysis: Research Question 1
 
 Question: Do small-group lessons (Tiers 2 & 3) help more than whole-class teaching (Tier 1)?
 
-The visualization below compares the Improvement Index across different delivery methods. This helps determine if targeted, smaller settings provide a significant advantage over universal instruction.
+
+RQ1: Analysis and Visualizations
 ---
 
 ## 
