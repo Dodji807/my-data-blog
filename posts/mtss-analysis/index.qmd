@@ -1,0 +1,54 @@
+---
+title: "MTSS Delivery Method Analysis"
+author: "Dodji807"
+date: "2026-02-19"
+categories: [Data Visualization, Lab 7]
+---
+
+## Project Introduction
+
+The goal of this project is to analyze the effectiveness of different educational interventions. Specifically, I am examining how various **delivery methods** impact the **Improvement Index** of students.
+
+This analysis focuses on the **Multi-Tiered System of Supports (MTSS)** framework, comparing two primary strategies:
+
+-   **Small-Group (Tiers 2 & 3):** Targeted support for students who need more intensive help.
+
+-   **Whole-Class (Tier 1):** Universal instruction provided to all students in a classroom.
+
+By visualizing these differences, I aim to determine which delivery method consistently yields higher average student growth.
+
+```{r}
+## Initial Project Visualization
+
+#| label: fig-mtss
+#| fig-cap: "Average Improvement Index by Delivery Method"
+#| echo: true
+#| warning: false
+
+library(tidyverse)
+
+# Ensure your CSV is in the 'data' folder of your project
+
+df <- read_csv("Interventions_Studies_And_Findings_clean.csv")
+
+# Calculate means 
+mtss_data <- df %>% 
+  summarise( 
+    `Small-Group (Tiers 2 & 3)` = mean(f_Improvement_Index[s_Delivery_Method_Small_Group %in% 1], na.rm = TRUE), 
+    `Whole-Class (Tier 1)` = mean(f_Improvement_Index[s_Delivery_Method_Whole_Class %in% 1], na.rm = TRUE) 
+  ) %>% 
+  pivot_longer(cols = everything(), names_to = "Method", values_to = "Avg_Improvement")
+
+# Create the visualization
+ggplot(mtss_data, aes(x = reorder(Method, Avg_Improvement), y = Avg_Improvement, fill = Method)) + 
+  geom_bar(stat = "identity") + 
+  geom_text(aes(label = round(Avg_Improvement, 2)), vjust = -0.5) + 
+  theme_minimal() + 
+  labs( 
+    title = "Average Improvement Index by Delivery Method", 
+    x = "Delivery Method", 
+    y = "Average Improvement Index" 
+  ) + 
+  scale_fill_manual(values = c("#1f77b4", "#ff7f0e")) + 
+  theme(legend.position = "none")
+```

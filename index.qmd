@@ -1,15 +1,35 @@
 ---
-title: "my-data-blog"
+title: "Education Research: MTSS Implementation Outcomes Analysis"
+subtitle: "Evaluating Intervention Effectiveness Across Tiers"
 listing:
-  contents: posts
-  feed: true
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
+  contents: posts          # Looks in your /posts folder for your analysis
+  sort: "date desc"        # Shows your newest progress at the top
+  type: default               # Grid looks cleaner for data projects
+  categories: true         # Allows users to filter by "MTSS" or "ggplot2"
+  sort-ui: true            # Enables sorting for your instructor
+  filter-ui: true          # Enables a search bar for your posts
 page-layout: full
-title-block-banner: true
+title-block-banner: "#1f77b4" # A blue banner to match your chart
 ---
 
+## Welcome to my Research Blog
 
+This blog documents my final project of **EDLD 652 Course: Data Visualization Winter 2026**
+
+I will be analysing how different tiers of support within the Muti-Tiered Systems of Support (MTSS) influence student improvement outcomes.
+
+The research will specifically answer the following questions: 
+
+Research Questions and Potential Visualizations
+
+1. Do small-group lessons (Tiers 2 & 3) help more than whole-class teaching (Tier 1)?
+
+2. Which Tier(s) is more effective for minority students compare to non-minority   
+   students?
+
+3. Does student behavior improve more when teachers receive specialized training?
+
+Below you will find my RQ1 data analysis and visualization.
+---
+
+## 
