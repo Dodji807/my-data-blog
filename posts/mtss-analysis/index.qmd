@@ -1,6 +1,6 @@
 ---
 title: "MTSS Delivery Method Analysis"
-author: "Dodji807"
+author: "Dodjivi Amekoudji"
 date: "2026-02-19"
 categories: [Data Visualization, Lab 7]
 ---
