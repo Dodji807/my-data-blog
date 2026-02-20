@@ -210,19 +210,18 @@ window.Quarto = {
 
 <section id="welcome-to-my-research-blog" class="level2">
 <h2 class="anchored" data-anchor-id="welcome-to-my-research-blog">Welcome to my Research Blog</h2>
-<p>This blog documents my final project of <strong>EDLD 652 Course: Data Visualization Winter 2026</strong></p>
-<p>I will be analysing how different tiers of support within the Muti-Tiered Systems of Support (MTSS) influence student improvement outcomes.</p>
-<p>The research will specifically answer the following questions:</p>
-<p>Research Questions and Potential Visualizations</p>
-<ol type="1">
-<li><p>Do small-group lessons (Tiers 2 &amp; 3) help more than whole-class teaching (Tier 1)?</p></li>
-<li><p>Which Tier(s) is more effective for minority students compare to non-minority<br>
-students?</p></li>
-<li><p>Does student behavior improve more when teachers receive specialized training?</p></li>
-</ol>
+<p>Final Project: MTSS Data Analysis Course: EDLD 652 | Data Visualization | Winter 2026</p>
+<p>Project Overview</p>
+<p>This project investigates how various levels of support within the Multi-Tiered System of Supports (MTSS) framework influence student growth. By analyzing intervention data, I aim to identify which strategies most effectively improve student from culturally outcomes.</p>
+<p>Research Questions</p>
+<p>1- Do small-group lessons (Tiers 2 &amp; 3) yield higher improvement than whole-class teaching (Tier 1)?</p>
+<p>2- Which Tiers are most effective for minority students compared to non-minority students?</p>
+<p>3- Does student behavior improve more when teachers receive specialized training?</p>
+<p>Analysis: Research Question 1</p>
+<p>Question: Do small-group lessons (Tiers 2 &amp; 3) help more than whole-class teaching (Tier 1)?</p>
 </section>
-<section id="below-you-will-find-my-rq1-data-analysis-and-visualization." class="level2">
-<h2 class="anchored" data-anchor-id="below-you-will-find-my-rq1-data-analysis-and-visualization.">Below you will find my RQ1 data analysis and visualization.</h2>
+<section id="rq1-analysis-and-visualizations" class="level2">
+<h2 class="anchored" data-anchor-id="rq1-analysis-and-visualizations">RQ1: Analysis and Visualizations</h2>
 </section>
 <section id="section" class="level2">
 <h2 class="anchored" data-anchor-id="section"></h2>
@@ -258,7 +257,7 @@ students?</p></li>
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="RGF0YSUyMFZpc3VhbGl6YXRpb24lMkNMYWIlMjA3" data-listing-date-sort="1771488000000" data-listing-file-modified-sort="1771551834022" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="245">
+<div class="quarto-post image-right" data-index="0" data-categories="RGF0YSUyMFZpc3VhbGl6YXRpb24lMkNMYWIlMjA3" data-listing-date-sort="1771488000000" data-listing-file-modified-sort="1771555179833" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="166">
 <div class="thumbnail"><a href="./posts/mtss-analysis/index.html" class="no-external">
 
 <p class="card-img-top"><img src="posts/mtss-analysis/index_files/figure-html/unnamed-chunk-1-1.png"  class="thumbnail-image card-img"/></p>
@@ -276,7 +275,19 @@ students?</p></li>
 
 </div>
 <div class="delink listing-description"><a href="./posts/mtss-analysis/index.html" class="no-external">
-The goal of this project is to analyze the effectiveness of different educational interventions. Specifically, I am examining how various&nbsp;<strong>delivery methods</strong>&nbsp;impact the&nbsp;<strong>Improvem…</strong>
+
+
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="do">## Initial Project Visualization</span></span>
+<span id="cb1-2"></span>
+<span id="cb1-3"><span class="co">#| label: fig-mtss</span></span>
+<span id="cb1-4"><span class="co">#| fig-cap: "Average Improvement Index by Delivery Method"</span></span>
+<span id="cb1-5"><span class="co">#| echo: true</span></span>
+<span id="cb1-6"><span class="co">#| warning: false</span></span>
+<span id="cb1-7"></span>
+<span id="cb1-8"><span class="fu">library</span>(tidyverse)</span></code></pre></div></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>──…</code></pre></div><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="co"></span></span><span id="cb3-2"></span><span id="cb3-3"><span class="ot"></span><span class="fu"></span><span class="st"></span></span></code></pre></div></div><div class="cell-output cell-output-stderr"><pre><code></code></pre></div><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="co"></span></span><span id="cb5-2"><span class="ot"></span><span class="sc"></span></span><span id="cb5-3"><span class="fu"></span></span><span id="cb5-4"><span class="st"></span><span class="at"></span><span class="st"></span><span class="ot"></span><span class="fu"></span><span class="sc"></span><span class="dv"></span><span class="at"></span><span class="cn"></span></span><span id="cb5-5"><span class="st"></span><span class="at"></span><span class="st"></span><span class="ot"></span><span class="fu"></span><span class="sc"></span><span class="dv"></span><span class="at"></span><span class="cn"></span></span><span id="cb5-6"><span class="sc"></span></span><span id="cb5-7"><span class="fu"></span><span class="at"></span><span class="fu"></span><span class="at"></span><span class="st"></span><span class="at"></span><span class="st"></span></span><span id="cb5-8"></span><span id="cb5-9"><span class="co"></span></span><span id="cb5-10"><span class="fu"></span><span class="fu"></span><span class="at"></span><span class="fu"></span><span class="at"></span><span class="at"></span><span class="sc"></span></span><span id="cb5-11"><span class="fu"></span><span class="at"></span><span class="st"></span><span class="sc"></span></span><span id="cb5-12"><span class="fu"></span><span class="fu"></span><span class="at"></span><span class="fu"></span><span class="dv"></span><span class="at"></span><span class="sc"></span><span class="fl"></span><span class="sc"></span></span><span id="cb5-13"><span class="fu"></span><span class="sc"></span></span><span id="cb5-14"><span class="fu"></span></span><span id="cb5-15"><span class="at"></span><span class="st"></span></span><span id="cb5-16"><span class="at"></span><span class="st"></span></span><span id="cb5-17"><span class="at"></span><span class="st"></span></span><span id="cb5-18"><span class="sc"></span></span><span id="cb5-19"><span class="fu"></span><span class="at"></span><span class="fu"></span><span class="st"></span><span class="st"></span><span class="sc"></span></span><span id="cb5-20"><span class="fu"></span><span class="at"></span><span class="st"></span></span></code></pre></div></div><div class="cell-output-display"><div><figure class="figure"><p></p></figure></div></div></div>
 </a></div>
 </div>
 <div class="metadata">
