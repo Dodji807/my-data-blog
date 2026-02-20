@@ -14,22 +14,26 @@ title-block-banner: "#1f77b4" # A blue banner to match your chart
 
 ## Welcome to my Research Blog
 
-This blog documents my final project of **EDLD 652 Course: Data Visualization Winter 2026**
+Final Project: MTSS Data Analysis
+Course: EDLD 652 | Data Visualization | Winter 2026
 
-I will be analysing how different tiers of support within the Muti-Tiered Systems of Support (MTSS) influence student improvement outcomes.
+Project Overview
 
-The research will specifically answer the following questions: 
+This project investigates how various levels of support within the Multi-Tiered System of Supports (MTSS) framework influence student growth. By analyzing intervention data, I aim to identify which strategies most effectively improve student from outcomes.
 
-Research Questions and Potential Visualizations
+Research Questions
 
-1. Do small-group lessons (Tiers 2 & 3) help more than whole-class teaching (Tier 1)?
+Instructional Impact: Do small-group lessons (Tiers 2 & 3) yield higher improvement than whole-class teaching (Tier 1)?
 
-2. Which Tier(s) is more effective for minority students compare to non-minority   
-   students?
+Equity in Outcomes: Which Tiers are most effective for minority students compared to non-minority students?
 
-3. Does student behavior improve more when teachers receive specialized training?
+Professional Development: Does student behavior improve more when teachers receive specialized training?
 
-Below you will find my RQ1 data analysis and visualization.
+Analysis: Research Question 1
+
+Question: Do small-group lessons (Tiers 2 & 3) help more than whole-class teaching (Tier 1)?
+
+The visualization below compares the Improvement Index across different delivery methods. This helps determine if targeted, smaller settings provide a significant advantage over universal instruction.
 ---
 
 ## 
